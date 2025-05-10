@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\PaymentController;
+use App\Http\Controllers\ReportController;
 use App\Http\Controllers\teacherController;
 use App\Http\Controllers\CourseController;
 use App\Http\Controllers\BatchController;
@@ -29,3 +30,4 @@ Route::resource('/courses', CourseController::class);
 Route::resource('/batches', BatchController::class);
 Route::resource('/enrollments', EnrollmentController::class);
 Route::resource('/payments', PaymentController::class);
+Route::get('/report/report1/{pid}', [ReportController::class, 'report1']);
